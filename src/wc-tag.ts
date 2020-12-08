@@ -17,14 +17,6 @@ class WcTag extends HTMLElement {
       this.shadowRoot.innerHTML = template();
     }
   }
-
-  connectedCallback(): void {}
-
-  disconnectedCallback(): void {}
-
-  attributeChangedCallback(attrName: string, oldVal: string, newVal: string): void {}
-
-  adoptedCallback(): void {}
 }
 
 window.customElements.define(WcTag.tag, WcTag);
