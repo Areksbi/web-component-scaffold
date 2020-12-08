@@ -23,6 +23,9 @@
   "devDependencies": {
     "css-loader": "^5.0.1",
     "html-webpack-plugin": "^4.5.0",
+    "husky": "^4.3.5",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1",
     "pug": "^3.0.0",
     "pug-loader": "^2.4.0",
     "sass": "^1.30.0",
@@ -31,5 +34,15 @@
     "webpack": "^5.10.0",
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*{.json,.css,.scss,.html,.pug,.js}": [
+      "prettier --write"
+    ]
   }
 }

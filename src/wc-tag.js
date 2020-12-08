@@ -1,37 +1,29 @@
-import template from './wc-tag.pug';
+import template from "./wc-tag.pug";
 
 class WcTag extends HTMLElement {
-    static get tag() {
-        return 'wc-tag'
+  static get tag() {
+    return "wc-tag";
+  }
+
+  static get observedAttributes() {
+    return ["wc-color"];
+  }
+
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+    if (this.shadowRoot) {
+      this.shadowRoot.innerHTML = template();
     }
+  }
 
-    static get observedAttributes() {
-        return ['wc-color']
-    }
+  connectedCallback() {}
 
-    constructor() {
-        super()
-        this.attachShadow({ mode: 'open' })
-        if (this.shadowRoot) {
-            this.shadowRoot.innerHTML = template();
-        }
-    }
+  disconnectedCallback() {}
 
-    connectedCallback() {
+  attributeChangedCallback(attrName, oldVal, newVal) {}
 
-    }
-
-    disconnectedCallback() {
-
-    }
-
-    attributeChangedCallback(attrName, oldVal, newVal) {
-
-    }
-
-    adoptedCallback() {
-
-    }
+  adoptedCallback() {}
 }
 
 window.customElements.define(WcTag.tag, WcTag);
