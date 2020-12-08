@@ -1,17 +1,17 @@
-import template from "./wc-tag.pug";
+import template from './wc-tag.pug';
 
 class WcTag extends HTMLElement {
   static get tag() {
-    return "wc-tag";
+    return 'wc-tag';
   }
 
   static get observedAttributes() {
-    return ["wc-color"];
+    return ['wc-color'];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
     if (this.shadowRoot) {
       this.shadowRoot.innerHTML = template();
     }
