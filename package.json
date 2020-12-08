@@ -1,6 +1,6 @@
 {
   "name": "web-component-scaffold",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Web Component generator.",
   "main": "index.js",
   "scripts": {
@@ -36,7 +36,6 @@
     "pug-loader": "^2.4.0",
     "sass": "^1.30.0",
     "sass-loader": "^10.1.0",
-    "standard-version": "^9.0.0",
     "style-loader": "^2.0.0",
     "ts-loader": "^8.0.11",
     "typescript": "^4.1.2",
