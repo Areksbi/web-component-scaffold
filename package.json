@@ -22,7 +22,10 @@
   },
   "homepage": "https://github.com/Areksbi/web-component-scaffold#readme",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.9.1",
+    "@typescript-eslint/parser": "^4.9.1",
     "css-loader": "^5.0.1",
+    "eslint": "^7.15.0",
     "html-webpack-plugin": "^4.5.0",
     "husky": "^4.3.5",
     "lint-staged": "^10.5.3",
@@ -45,7 +48,8 @@
   },
   "lint-staged": {
     "*.ts": [
-      "prettier --write"
+      "prettier --write",
+      "eslint . --ext .ts --fix"
     ],
     "*{.json,.css,.scss,.html,.pug,.js}": [
       "prettier --write"
