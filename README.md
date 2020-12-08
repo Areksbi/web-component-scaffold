@@ -1,1 +1,3 @@
-# web-component-scaffold
+# Web Component Scaffold
+
+- `npm start`
