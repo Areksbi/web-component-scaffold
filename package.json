@@ -43,6 +43,9 @@
     }
   },
   "lint-staged": {
+    "*.ts": [
+      "prettier --write"
+    ],
     "*{.json,.css,.scss,.html,.pug,.js}": [
       "prettier --write"
     ]

@@ -11,6 +11,7 @@ class WcTag extends HTMLElement {
 
   constructor() {
     super();
+
     this.attachShadow({ mode: 'open' });
     if (this.shadowRoot) {
       this.shadowRoot.innerHTML = template();
