@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --config webpack.dev.js",
+    "e2e": "concurrently \"npm start\" \"cypress open\"",
     "prod": "webpack --config webpack.prod.js",
     "release": "standard-version",
     "release:major": "standard-version --release-as major",
@@ -30,7 +31,9 @@
     "@commitlint/config-conventional": "^11.0.0",
     "@typescript-eslint/eslint-plugin": "^4.9.1",
     "@typescript-eslint/parser": "^4.9.1",
+    "concurrently": "^5.3.0",
     "css-loader": "^5.0.1",
+    "cypress": "^6.1.0",
     "eslint": "^7.15.0",
     "html-webpack-plugin": "^4.5.0",
     "husky": "^4.3.5",
