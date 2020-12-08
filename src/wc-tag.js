@@ -1,26 +1,19 @@
+import template from './wc-tag.pug';
+
 class WcTag extends HTMLElement {
     static get tag() {
         return 'wc-tag'
     }
 
     static get observedAttributes() {
-        return ['wc-color', 'wc-variant']
+        return ['wc-color']
     }
 
     constructor() {
         super()
         this.attachShadow({ mode: 'open' })
         if (this.shadowRoot) {
-            this.shadowRoot.innerHTML = `
-            <style>
-    h1 {
-        font-size: 7rem;
-        color: #000;
-        font-family: Helvetica;
-        text-align: center;
-    }
-</style>
-<h1>My Custom Title!</h1>`
+            this.shadowRoot.innerHTML = template();
         }
     }
 
