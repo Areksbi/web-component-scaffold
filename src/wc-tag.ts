@@ -1,11 +1,11 @@
 import template from './wc-tag.pug';
 
 class WcTag extends HTMLElement {
-  static get tag() {
+  static get tag(): string {
     return 'wc-tag';
   }
 
-  static get observedAttributes() {
+  static get observedAttributes(): string[] {
     return ['wc-color'];
   }
 
@@ -17,13 +17,13 @@ class WcTag extends HTMLElement {
     }
   }
 
-  connectedCallback() {}
+  connectedCallback(): void {}
 
-  disconnectedCallback() {}
+  disconnectedCallback(): void {}
 
-  attributeChangedCallback(attrName, oldVal, newVal) {}
+  attributeChangedCallback(attrName: string, oldVal: string, newVal: string): void {}
 
-  adoptedCallback() {}
+  adoptedCallback(): void {}
 }
 
 window.customElements.define(WcTag.tag, WcTag);
