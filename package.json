@@ -4,8 +4,9 @@
   "description": "Web Component generator.",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "start": "webpack serve"
+    "build": "webpack --config webpack.dev.js",
+    "release": "webpack --config webpack.prod.js",
+    "start": "webpack serve --config webpack.dev.js"
   },
   "repository": {
     "type": "git",

@@ -2,14 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    port: 9002,
-  },
-  devtool: 'inline-source-map',
   entry: './src/wc-tag.ts',
-  mode: 'development',
   module: {
     rules: [
       {
